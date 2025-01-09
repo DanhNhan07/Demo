@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+    
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="grid">
+                 <nav class="header__navbar">
+                <ul class="header__navbar--list">
+            
+                    <li class="header__navbar--item">
+                        <a href="" class="header__navbar--icon--link">
+                            <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                        <a href="" class="header__navbar--icon--link">
+                            <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                    </li>
+                </ul>
+                <ul class="header__navbar--list">
+                    <li class="header__navbar--item header__navbar--item--has-notify">
+                        <a href="" class="header__navbar--item--link"><i class="header__navbar-icon fa-solid fa-bell"></i> 通知</a> 
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>New</h3>
+                            </header>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="assets/image/OIP.jpg" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm chính hãng</span>
+                                            <span class="header__notify-descriotion">mô tả sản phẩm</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="assets/image/OIP.jpg" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm chính hãng</span>
+                                            <span class="header__notify-descriotion">mô tả sản phẩm</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="assets/image/OIP.jpg" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Mỹ phẩm chính hãng</span>
+                                            <span class="header__notify-descriotion">mô tả sản phẩm</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header__notify-footer">
+                                <a href="" class="header__notify-footer-btn">ALL</a>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="header__navbar--item">
+                        <a href="" class="header__navbar--item--link"><i class="header__navbar-icon fa-solid fa-circle-question"></i> ヘルプ</a>
+                    </li>
+                    <ul class="header__navbar">
+                        <ul class="header__navbar">
+                            <li class="header__navbar-item" id="account-options" style="display: none;">
+                                
+                                <div class="header__navbar-dropdown">
+                                    <button id="openSignupBtn">Sign Up</button>
+                                    <button id="openLoginBtn">Sign IN</button>
+                                </div>
+                            </li>
+                            <li class="header__navbar-item header__navbar-user" id="user-menu" style="display: none;">
+                                <img src="https://yt3.ggpht.com/yti/ANjgQV-T_0ZErc1EIqsYLSkq1dGl8OQP4jNsWUFgQKWB2x6oADo=s88-c-k-c0x00ffffff-no-rj" 
+                                    alt="User Avatar" class="header__navbar-user-img" id="user-img">
+                                <span class="header__navbar-user-name" id="user-name">Chưa đăng nhập</span>
+                                <ul class="header__navbar-user-menu" id="user-menu-list" style="display: none;">
+                                    <li class="header__navbar-user-item">
+                                        <a href="#">会員情報</a> <!-- Thông tin tài khoản -->
+                                    </li>
+                                    <li class="header__navbar-user-item">
+                                        <a href="#">購入商品一覧</a> <!-- Lịch sử mua hàng -->
+                                    </li>
+                                    <li class="header__navbar-user-item">
+                                        <a href="#">購入履歴</a> <!-- Lịch sử giao dịch -->
+                                    </li>
+                                    <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                        <a href="#" id="logout">ログアウト</a> <!-- Đăng xuất -->
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                                                                                                                                                                                                
+                 </nav>                                                                   
+                  
+                 <div class="header--with--sreach">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            <img src="/assets/image/title.jpg" alt="" class="header__logo--img">
+                        </a>
+                                                                 
+                    </div>
+                 
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                           <input type="text" class="header__search-input" placeholder="Nhap de tim kiem san pham">
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">検索履歴</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">着物</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">靴下</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Store In</span>
+                            <i class="header__search-select-icon fa-solid fa-caret-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-select-item header__search-select-item-active">
+                                    <span>Store In</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+                                <li class="header__search-select-item">
+                                    <span>Store Out</span>
+                                    <i class="fa-solid fa-check"></i>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>    
+                    <!-- cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice">3</span>
+                                <!-- no cart: header__cart-list--no-cart -->
+                             <div class="header__cart-list">
+                              <img src="/assets/image/cart.jpg" alt="" class="header__cart-list--no-cart-img">
+                                 <span class="header__cart-list-no-cart-msg">
+                                    商品はありません
+                                 </span>
+                                 <h4 class="header__cart-heading">追加された製品</h4>
+                                 <ul class="header__cart-list-item">
+                                    <!-- Cart item -->
+                                    <li class="header__cart-item">
+                                        <img src="/assets/image/thoitrang.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">衣類セット</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">200.000</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                    
+                                                </div>                                                                                                                                                
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    分類: 綿
+                                                </span>
+                                                <span class="header__cart-item-remove">消す</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="/assets/image/thoitrang.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">衣類セット</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">200.000</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                    
+                                                </div>                                                          
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    分類: 綿
+                                                </span>
+                                                <span class="header__cart-item-remove">消す</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="/assets/image/thoitrang.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">衣類セット</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">200.000</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                    
+                                                </div>                                                          
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    分類: 綿
+                                                </span>
+                                                <span class="header__cart-item-remove">消す</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="/assets/image/thoitrang.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">衣類セット</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">200.000</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                    
+                                                </div>                                                          
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    分類: 綿
+                                                </span>
+                                                <span class="header__cart-item-remove">消す</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                 </ul>
+                                 <a class="header__cart-view-cart btn btn-primary">在庫</a>
+                                </div> 
+                         </div>
+                    </div>     
+                </div>
+            </div>
+        </header>
+
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                            <nav class="category">
+                              <h3 class="category__heading">
+                                 <i class="category__heading-icon fa-solid fa-list"></i>
+                                 Menu</h3>
+                                <ul class="category-list">
+                                     <li class="category-item category-item--active">
+                                     <a href="#" class="category-item__link ">Men</a>
+                                    </li>
+                                     <li class="category-item">
+                                       <a href="#" class="category-item__link">Women</a>
+                                    </li>
+                                    <li class="category-item">
+                                      <a href="#" class="category-item__link">Kids</a>
+                                    </li>
+                                </ul>
+
+                             </nav>                                                         
+                    </div>
+              
+                
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter__label">並べ替え</span>
+                            <button class="home-filter__btn btn">人気</button>
+                            <button class="home-filter__btn btn btn-primary">最新</button>
+                            <button class="home-filter__btn btn">ベストセラー</button>
+
+                            <div class="select-input">
+                                <span class=" select-input__label">値段</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <!-- List option -->
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">低価格から高価格まで</a>
+                                        
+                                    </li>
+                                    <li class="select-input__item">
+                                        
+                                        <a href="" class="select-input__link">高価格から低価格まで</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-curent">1</span>
+                                    /14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                      <i class="home-filter__page-icon fa-solid fa-chevron-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fa-solid fa-chevron-right"></i>
+                                      </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <div class="grid__row">
+                                <div class="grid__column-2-4">
+                                      <!-- Product Item -->
+                                     <a class="home-product-item "href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                                              <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                                            
+                                              <div class="home-product-item__price">
+                                             <span class="home-product-item__price-old">1.200.000</span>
+                                             <span class="home-product-item__price-curent">900.000</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                 <span class="home-product-item__like home-product-item__like--liked">
+                                                  <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                                                  <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                                                 </span>
+                                            <div class="home-product-item__rate">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                         </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">ベトナム</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fa-solid fa-check"></i>
+                                                 <span>人気</span>   
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">割引</span>
+                                            </div>
+                                
+                                        
+                                         </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- Product Item -->
+                                   <a class="home-product-item "href="#">
+                                          <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                                            <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                                          
+                                            <div class="home-product-item__price">
+                                           <span class="home-product-item__price-old">1.200.000</span>
+                                          </div>
+                                          <div class="home-product-item__action">
+                                               <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                                               </span>
+                                          <div class="home-product-item__rate">
+                                              <i class="fa-solid fa-star"></i>
+                                              <i class="fa-solid fa-star"></i>
+                                              <i class="fa-solid fa-star"></i>
+                                              <i class="fa-solid fa-star"></i>
+                                              <i class="fa-solid fa-star"></i>
+                                          </div>
+                                       </div>
+                                          <div class="home-product-item__origin">
+                                              <span class="home-product-item__brand">Whoo</span>
+                                              <span class="home-product-item__origin-name">ベトナム</span>
+                                          </div>
+                                          <div class="home-product-item__favourite">
+                                              <i class="fa-solid fa-check"></i>
+                                               <span>人気</span>   
+                                          </div>
+                                          <div class="home-product-item__sale-off">
+                                              <span class="home-product-item__sale-off-percent">10%</span>
+                                              <span class="home-product-item__sale-off-label">割引</span>
+                                          </div>
+                              
+                                      
+                                       </a>
+                              </div><div class="grid__column-2-4">
+                                <!-- Product Item -->
+                               <a class="home-product-item "href="#">
+                                      <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                                        <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                                      
+                                        <div class="home-product-item__price">
+                                       <span class="home-product-item__price-old">1.200.000</span>
+                                      </div>
+                                      <div class="home-product-item__action">
+                                           <span class="home-product-item__like home-product-item__like--liked">
+                                            <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                                           </span>
+                                      <div class="home-product-item__rate">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                      </div>
+                                   </div>
+                                      <div class="home-product-item__origin">
+                                          <span class="home-product-item__brand">Whoo</span>
+                                          <span class="home-product-item__origin-name">ベトナム</span>
+                                      </div>
+                                      <div class="home-product-item__favourite">
+                                          <i class="fa-solid fa-check"></i>
+                                           <span>人気</span>   
+                                      </div>
+                                      <div class="home-product-item__sale-off">
+                                          <span class="home-product-item__sale-off-percent">10%</span>
+                                          <span class="home-product-item__sale-off-label">割引</span>
+                                      </div>
+                          
+                                  
+                                   </a>
+                          </div><div class="grid__column-2-4">
+                            <!-- Product Item -->
+                           <a class="home-product-item "href="#">
+                                  <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                                    <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                                  
+                                    <div class="home-product-item__price">
+                                   <span class="home-product-item__price-old">1.200.000</span>
+                                  </div>
+                                  <div class="home-product-item__action">
+                                       <span class="home-product-item__like home-product-item__like--liked">
+                                        <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                                        <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                                       </span>
+                                  <div class="home-product-item__rate">
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                  </div>
+                               </div>
+                                  <div class="home-product-item__origin">
+                                      <span class="home-product-item__brand">Whoo</span>
+                                      <span class="home-product-item__origin-name">ベトナム</span>
+                                  </div>
+                                  <div class="home-product-item__favourite">
+                                      <i class="fa-solid fa-check"></i>
+                                       <span>人気</span>   
+                                  </div>
+                                  <div class="home-product-item__sale-off">
+                                      <span class="home-product-item__sale-off-percent">10%</span>
+                                      <span class="home-product-item__sale-off-label">割引</span>
+                                  </div>
+                      
+                              
+                               </a>
+                      </div><div class="grid__column-2-4">
+                        <!-- Product Item -->
+                       <a class="home-product-item "href="#">
+                              <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                                <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                              
+                                <div class="home-product-item__price">
+                               <span class="home-product-item__price-old">1.200.000</span>
+                              </div>
+                              <div class="home-product-item__action">
+                                   <span class="home-product-item__like home-product-item__like--liked">
+                                    <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                                    <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                                   </span>
+                              <div class="home-product-item__rate">
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                              </div>
+                           </div>
+                              <div class="home-product-item__origin">
+                                  <span class="home-product-item__brand">Whoo</span>
+                                  <span class="home-product-item__origin-name">ベトナム</span>
+                              </div>
+                              <div class="home-product-item__favourite">
+                                  <i class="fa-solid fa-check"></i>
+                                   <span>人気</span>   
+                              </div>
+                              <div class="home-product-item__sale-off">
+                                  <span class="home-product-item__sale-off-percent">10%</span>
+                                  <span class="home-product-item__sale-off-label">割引</span>
+                              </div>
+                  
+                          
+                           </a>
+                  </div><div class="grid__column-2-4">
+                    <!-- Product Item -->
+                   <a class="home-product-item "href="#">
+                          <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                            <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                          
+                            <div class="home-product-item__price">
+                           <span class="home-product-item__price-old">1.200.000</span>
+                          </div>
+                          <div class="home-product-item__action">
+                               <span class="home-product-item__like home-product-item__like--liked">
+                                <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                                <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                               </span>
+                          <div class="home-product-item__rate">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                          </div>
+                       </div>
+                          <div class="home-product-item__origin">
+                              <span class="home-product-item__brand">Whoo</span>
+                              <span class="home-product-item__origin-name">ベトナム</span>
+                          </div>
+                          <div class="home-product-item__favourite">
+                              <i class="fa-solid fa-check"></i>
+                               <span>人気</span>   
+                          </div>
+                          <div class="home-product-item__sale-off">
+                              <span class="home-product-item__sale-off-percent">10%</span>
+                              <span class="home-product-item__sale-off-label">割引</span>
+                          </div>
+              
+                      
+                       </a>
+              </div><div class="grid__column-2-4">
+                <!-- Product Item -->
+               <a class="home-product-item "href="#">
+                      <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                        <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                      
+                        <div class="home-product-item__price">
+                       <span class="home-product-item__price-old">1.200.000</span>
+                      </div>
+                      <div class="home-product-item__action">
+                           <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                           </span>
+                      <div class="home-product-item__rate">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </div>
+                   </div>
+                      <div class="home-product-item__origin">
+                          <span class="home-product-item__brand">Whoo</span>
+                          <span class="home-product-item__origin-name">ベトナム</span>
+                      </div>
+                      <div class="home-product-item__favourite">
+                          <i class="fa-solid fa-check"></i>
+                           <span>人気</span>   
+                      </div>
+                      <div class="home-product-item__sale-off">
+                          <span class="home-product-item__sale-off-percent">10%</span>
+                          <span class="home-product-item__sale-off-label">割引</span>
+                      </div>
+          
+                  
+                   </a>
+          </div><div class="grid__column-2-4">
+            <!-- Product Item -->
+           <a class="home-product-item "href="#">
+                  <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                    <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+                  
+                    <div class="home-product-item__price">
+                   <span class="home-product-item__price-old">1.200.000</span>
+                  </div>
+                  <div class="home-product-item__action">
+                       <span class="home-product-item__like home-product-item__like--liked">
+                        <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                        <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                       </span>
+                  <div class="home-product-item__rate">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                  </div>
+               </div>
+                  <div class="home-product-item__origin">
+                      <span class="home-product-item__brand">Whoo</span>
+                      <span class="home-product-item__origin-name">ベトナム</span>
+                  </div>
+                  <div class="home-product-item__favourite">
+                      <i class="fa-solid fa-check"></i>
+                       <span>人気</span>   
+                  </div>
+                  <div class="home-product-item__sale-off">
+                      <span class="home-product-item__sale-off-percent">10%</span>
+                      <span class="home-product-item__sale-off-label">割引</span>
+                  </div>
+      
+              
+               </a>
+      </div><div class="grid__column-2-4">
+        <!-- Product Item -->
+       <a class="home-product-item "href="#">
+              <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+              
+                <div class="home-product-item__price">
+               <span class="home-product-item__price-old">1.200.000</span>
+              </div>
+              <div class="home-product-item__action">
+                   <span class="home-product-item__like home-product-item__like--liked">
+                    <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                    <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                   </span>
+              <div class="home-product-item__rate">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+              </div>
+           </div>
+              <div class="home-product-item__origin">
+                  <span class="home-product-item__brand">Whoo</span>
+                  <span class="home-product-item__origin-name">ベトナム</span>
+              </div>
+              <div class="home-product-item__favourite">
+                  <i class="fa-solid fa-check"></i>
+                   <span>人気</span>   
+              </div>
+              <div class="home-product-item__sale-off">
+                  <span class="home-product-item__sale-off-percent">10%</span>
+                  <span class="home-product-item__sale-off-label">割引</span>
+              </div>
+  
+          
+           </a>
+            </div><div class="grid__column-2-4">
+                 <!-- Product Item -->
+            <a class="home-product-item "href="#">
+                <div class="home-product-item__img" style="background-image: url(https://i.pinimg.com/474x/74/e3/49/74e349b2fd1a50c61cdc3e57f6e31440.jpg);"></div>
+                  <h4 class="home-product-item__name">ベトナムのアオザイ</h4>
+          
+                  <div class="home-product-item__price">
+                     <span class="home-product-item__price-old">1.200.000</span>
+                             </div>
+                            <div class="home-product-item__action">
+                             <span class="home-product-item__like home-product-item__like--liked">
+                         <i class="home-product-item__like-icon-empty fa-solid fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fa-regular fa-heart"></i>
+                             </span>
+                             <div class="home-product-item__rate">
+                              <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                              </div>
+                        </div>
+                             <div class="home-product-item__origin">
+                         <span class="home-product-item__brand">Whoo</span>
+                         <span class="home-product-item__origin-name">ベトナム</span>
+                    </div>
+                     <div class="home-product-item__favourite">
+                            <i class="fa-solid fa-check"></i>
+                              <span>人気</span>   
+                     </div>
+                    <div class="home-product-item__sale-off">
+                         <span class="home-product-item__sale-off-percent">10%</span>
+                          <span class="home-product-item__sale-off-label">割引</span>
+                    </div>
+
+      
+                      </a>
+             </div>        
+        </div> 
+         </div>
+                        <ul class="pagination home-product-pagination" id="pagination">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link"></a>
+                                <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link pagination-item__link--active">1</a>                                
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>                                
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>                                
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>                                
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>                                
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">...</a>                                
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link"></a>
+                                <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                            </li>
+                        </ul>
+
+                     </div>
+                </div>
+            </div>                                                                                                                                                       
+        </div>        
+
+        <div class="content">
+
+        </div>
+        <footer class="footer">
+
+        </footer>
+        
+        
+        
+         <!-- modal layout -->       
+         <div class="modal"id="authModal" style="display: none;">
+            <div class="modal__overlay"></div>
+            <div class="modal__body"> 
+                <!-- Authen form -->
+                <div class="auth-form">
+                    <!-- Sign-up Form -->
+                    <div class="auth-form__container" id="signup-form">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Sign Up</h3>
+                            <span class="auth-form__switch-btn" id="switch-to-login">Sign In</span>
+                        </div>
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="メールアドレスを入力" required>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="パスワード" required>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="パスワード再入力" required>
+                            </div>
+                        </div>
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">利用規約、サービス、
+                                <a href="#" class="auth-form__policy-link">プライバシーポリシーに</a>
+                                <a href="#" class="auth-form__policy-link">同意することにより</a>
+                            </p>
+                        </div>
+                        <div class="auth-form__controls">
+                            <button class="btn btn--normal auth-form__controls-back" id="back-to-home">Back</button>
+                            <button class="btn btn-primary register-btn" id="register-btn">Sign Up</button>
+                        </div>
+                    </div>
+        
+                    <!-- Sign-in Form -->
+                    <div class="auth-form__container" id="login-form" style="display:none;">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Sign In</h3>
+                            <span class="auth-form__switch-btn" id="switch-to-signup">Sign Up</span>
+                        </div>
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="メールアドレスを入力" required>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="パスワード" required>
+                            </div>
+                        </div>
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="#" class="auth-form__help-link auth-form__help-forgot">パスワードを忘れた場合</a>
+                                <span class="auth-form__help-separate"></span>
+                                <a href="#" class="auth-form__help-link">ヘルプp</a>
+                            </div>
+                        </div>
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">利用規約、サービス、
+                                <a href="#" class="auth-form__policy-link">プライバシーポリシーに</a>
+                                <a href="#" class="auth-form__policy-link">同意することにより</a>
+                            </p>
+                        </div>
+                        <div class="auth-form__controls">
+                            <button class="btn btn--normal auth-form__controls-back" id="back-to-home">Back</button>
+                            <button class="btn btn-primary login-btn" id="login-btn">Sign In</button>
+                        </div>
+                    </div>
+        
+                    <!-- Social Login -->
+                    <div class="auth-form__socials" id="social-login">
+                        <a href="#" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
+                            <span class="auth-form__socials-title"> Kết nối với FB</span>
+                        </a>
+                        <a href="#" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                            <span class="auth-form__socials-title"> Kết nối với Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add some basic JavaScript for functionality -->
+        
+        <script src="assets/js/script.js"></script>
+
+
+</body>
+</html>
