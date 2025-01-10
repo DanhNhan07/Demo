@@ -56,4 +56,32 @@ backToHomeBtns.forEach(btn => {
     });
 });
 
+// panel
+const panels = document.querySelectorAll(".panel");
+panels.forEach((item)=>{
+    item.addEventListener("click",()=>{
+        removeActive();
+        
+        item.classList.add("active")
+    })
 
+
+});
+function removeActive(){
+    panels.forEach((item)=>{
+        item.classList.remove("active");
+    });
+}
+
+// pagination
+const pagination = document.querySelectorAll("#pagination .pagination-item__link");
+ pagination.forEach((a) => { 
+    a.addEventListener("click", (e) => { 
+        e.preventDefault(); Removepagination();
+     a.classList.add("pagination-item__link--active"); 
+    }); }); 
+
+function Removepagination(){ 
+    pagination.forEach((a) => { 
+        a.classList.remove("pagination-item__link--active"); });
+    }

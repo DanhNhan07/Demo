@@ -684,6 +684,57 @@
     float: right;  
     margin: 0 12px 12px 0;
 }
+
+
+.containerImg{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+}
+.slideImg{
+background-color: #f9e6e6;
+
+
+}
+.panel{
+    height: 20vw;
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    border-radius: 20px;
+    color: #a55f5f;
+    cursor: pointer;
+    flex: 1;
+    position: relative;
+    margin: 15px;
+    transition: flex 0.5s;
+}
+.panel h3{
+    font-size: 3rem;
+    margin: 0;
+    position: absolute;
+    bottom: 20px; 
+    left: 5px;
+    opacity: 0;
+}
+.panel.active{
+    flex: 8;
+
+}
+.panel.active h3{
+    opacity: 1;
+    transform: opcacity 4s 3s;
+}
+@media (max-width: 720px){
+    .panelnel:nth-of-type(4),
+    .panelnel:nth-of-type(5){
+        display: none;
+    }
+}
+
+/* container */
+
 .app__container{
     background-color: #f8eeee;
     padding-top: 20px;
