@@ -85,3 +85,57 @@ function Removepagination(){
     pagination.forEach((a) => { 
         a.classList.remove("pagination-item__link--active"); });
     }
+
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+let currentActive = 1;
+
+next.addEventListener("click",()=>{
+    changeStep(1);
+})
+
+prev.addEventListener("click",()=>{
+    changeStep(-1);
+})
+
+function changeStep(step){
+    currentActive+=step;
+    updateBtn();
+}
+
+function updateBtn(){
+     pagination.forEach((step,id)=>{
+        if(id<currentActive){
+            Removepagination()
+            step.classList.add("pagination-item__link--active");
+            
+        }
+        else{
+            
+            step.classList.remove("pagination-item__link--active")
+            
+        }
+
+     })
+}
+
+
+
+    const categoryItems = document.querySelectorAll("#category-id .category-item");
+
+    categoryItems.forEach((item) => {
+        item.addEventListener("click", (event) => {
+            event.preventDefault();
+            removeActiveCategory();
+            item.classList.add("category-item--active");
+        });
+    });
+
+    function removeActiveCategory() {
+        categoryItems.forEach((item) => {
+            item.classList.remove("category-item--active");
+        });
+    }
+
+
