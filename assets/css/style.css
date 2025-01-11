@@ -708,7 +708,7 @@ background-color: #f9e6e6;
     flex: 1;
     position: relative;
     margin: 15px;
-    transition: flex 0.5s;
+    transition: flex 1.5s;
 }
 .panel h3{
     font-size: 3rem;

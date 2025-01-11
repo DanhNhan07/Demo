@@ -59,7 +59,7 @@ backToHomeBtns.forEach(btn => {
 // panel
 const panels = document.querySelectorAll(".panel");
 panels.forEach((item)=>{
-    item.addEventListener("click",()=>{
+    item.addEventListener("mouseover",()=>{
         removeActive();
         
         item.classList.add("active")
