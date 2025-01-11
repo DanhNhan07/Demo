@@ -137,5 +137,24 @@ function updateBtn(){
             item.classList.remove("category-item--active");
         });
     }
+   
+    
+        const notifyItem = document.getElementById('has-noti');
+    
+        if (notifyItem) {
+            notifyItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                notifyItem.classList.toggle('header__navbar--item--has-notify');
+                event.stopPropagation();
+            });
+    
+            // Tắt thông báo khi nhấp vào bất kỳ chỗ nào khác
+            document.addEventListener('click', () => {
+                notifyItem.classList.remove('header__navbar--item--has-notify');
+            });
+        }
+    
+    
+    
 
-
+    

@@ -114,7 +114,7 @@
     border-bottom-right-radius: 2px;
 }
 
-.header__navbar--item--has-notify:hover .header__notify{
+.header__navbar--item--has-notify .header__notify{
     display: block;
 
 }
