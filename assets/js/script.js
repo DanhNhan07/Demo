@@ -60,24 +60,30 @@ backToHomeBtns.forEach(btn => {
 const panels = document.querySelectorAll(".panel");
 panels.forEach((item)=>{
     item.addEventListener("mouseover",()=>{
-        removeActive();
+        removeActive('active');
         
         item.classList.add("active")
     })
 
 
 });
-function removeActive(){
-    panels.forEach((item)=>{
-        item.classList.remove("active");
+
+function removeActive(activeClass) {
+    const activeItems = document.querySelectorAll(`.${activeClass}`);
+    activeItems.forEach((item) => {
+        item.classList.remove(activeClass);
     });
 }
+
+
+
+
 
 // pagination
 const pagination = document.querySelectorAll("#pagination .pagination-item__link");
  pagination.forEach((a) => { 
     a.addEventListener("click", (e) => { 
-        e.preventDefault(); Removepagination();
+        e.preventDefault(); removeActive("pagination-item__link--active")
      a.classList.add("pagination-item__link--active"); 
     }); }); 
 
@@ -155,6 +161,16 @@ function updateBtn(){
         }
     
     
-    
+        const searchOptions = document.querySelectorAll(".header__search-select-item");
+        searchOptions.forEach((option) => {
+            option.addEventListener("click", (event) => {
+                event.preventDefault();
+                removeActive('header__search-select-item-active');
+                option.classList.add('header__search-select-item-active');
+            });
+        });
+        
+       
+        
 
     
