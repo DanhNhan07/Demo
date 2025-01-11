@@ -279,7 +279,7 @@
                               <h3 class="category__heading">
                                  <i class="category__heading-icon fa-solid fa-list"></i>
                                  Menu</h3>
-                                <ul class="category-list" id="category-id">
+                                <ul class="category-list">
                                      <li class="category-item category-item--active">
                                      <a href="#" class="category-item__link ">Men</a>
                                     </li>
@@ -844,20 +844,27 @@
                 <!-- Authen form -->
                 <div class="auth-form">
                     <!-- Sign-up Form -->
-                    <div class="auth-form__container" id="signup-form">
+                    <form class="auth-form__container" id="signup-form">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Sign Up</h3>
                             <span class="auth-form__switch-btn" id="switch-to-login">Sign In</span>
                         </div>
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="メールアドレスを入力" required>
+                                <input id="fullname" name="fullname" rules="required" type="text" class="auth-form__input" placeholder="FullName" required>
+                                <span class="form-mesage"></span>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="パスワード" required>
+                                <input id="email" name="email" rules="required|email" type="text" class="auth-form__input" placeholder="メールアドレスを入力" required>
+                                <span class="form-mesage"></span>
+                            </div>
+                            <div class="auth-form__group">
+                                <input id="password" name="password" rules="required|min:6" type="password" class="auth-form__input" placeholder="パスワード" required>
+                                <span class="form-mesage"></span>
                             </div>
                             <div class="auth-form__group">
                                 <input type="password" class="auth-form__input" placeholder="パスワード再入力" required>
+                                <span class="form-mesage"></span>
                             </div>
                         </div>
                         <div class="auth-form__aside">
@@ -868,22 +875,22 @@
                         </div>
                         <div class="auth-form__controls">
                             <button class="btn btn--normal auth-form__controls-back" id="back-to-home">Back</button>
-                            <button class="btn btn-primary register-btn" id="register-btn">Sign Up</button>
+                            <button type="submit" class="btn btn-primary register-btn" id="register-btn">Sign Up</button>
                         </div>
-                    </div>
+                    </form>
         
                     <!-- Sign-in Form -->
-                    <div class="auth-form__container" id="login-form" style="display:none;">
+                    <form class="auth-form__container" id="login-form" style="display:none;">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Sign In</h3>
                             <span class="auth-form__switch-btn" id="switch-to-signup">Sign Up</span>
                         </div>
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="メールアドレスを入力" required>
+                                <input id="email" name="email" rules="required|email" type="text" class="auth-form__input" placeholder="メールアドレスを入力" required>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="パスワード" required>
+                                <input id="password" name="password" rules="required|min:6" type="password" class="auth-form__input" placeholder="パスワード" required>
                             </div>
                         </div>
                         <div class="auth-form__aside">
@@ -901,9 +908,9 @@
                         </div>
                         <div class="auth-form__controls">
                             <button class="btn btn--normal auth-form__controls-back" id="back-to-home">Back</button>
-                            <button class="btn btn-primary login-btn" id="login-btn">Sign In</button>
+                            <button type="submit" class="btn btn-primary login-btn" id="login-btn">Sign In</button>
                         </div>
-                    </div>
+                    </form>
         
                     
                     
@@ -915,6 +922,11 @@
         
         <script src="assets/js/script.js"></script>
 
+        <script>
+            Validator("#signup-form");
+            Validator("#login-form");
+
+        </script>
 
 </body>
 </html>

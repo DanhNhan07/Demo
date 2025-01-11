@@ -6,36 +6,35 @@ const loginForm = document.getElementById("login-form");
 const switchToLoginBtn = document.getElementById("switch-to-login");
 const switchToSignupBtn = document.getElementById("switch-to-signup");
 const backToHomeBtns = document.querySelectorAll("#back-to-home");
-const socialLogin = document.getElementById("social-login");
 const accountOptions = document.getElementById("account-options");
 const userMenu = document.getElementById("user-menu");
 
-// Biến giả định kiểm tra trạng thái đăng nhập
-let isLoggedIn = false; // hoặc true nếu người dùng đã đăng nhập
 
-// Hiển thị hoặc ẩn các tùy chọn tài khoản dựa trên trạng thái đăng nhập
+let isLoggedIn = false; 
+
+// Hiển thị tài khoản 
 if (!isLoggedIn) {
-    accountOptions.style.display = "block"; // Hiển thị các nút đăng ký/đăng nhập
-    userMenu.style.display = "none"; // Ẩn thông tin người dùng
+    accountOptions.style.display = "block"; // Hiển thị nút đăng ký đăng nhập
+    userMenu.style.display = "none"; 
 } else {
-    accountOptions.style.display = "none"; // Ẩn các nút đăng ký/đăng nhập
-    userMenu.style.display = "block"; // Hiển thị thông tin người dùng
+    accountOptions.style.display = "none"; // Ẩn nút đăng ký đăng nhập
+    userMenu.style.display = "block"; 
 }
 
-// Hiển thị form đăng ký và modal khi nhấp vào nút "Đăng ký"
+// form đăng ký
 openSignupBtn.addEventListener("click", () => {
     authModal.style.display = "flex";
     signupForm.style.display = "block";
     loginForm.style.display = "none";
-    socialLogin.style.display = "none";
+    
 });
 
-// Hiển thị form đăng nhập và modal khi nhấp vào nút "Đăng nhập"
+// form đăng nhập 
 openLoginBtn.addEventListener("click", () => {
     authModal.style.display = "flex";
     loginForm.style.display = "block";
     signupForm.style.display = "none";
-    socialLogin.style.display = "none";
+   
 });
 
 // Chuyển đổi giữa form đăng nhập và đăng ký
@@ -49,7 +48,7 @@ switchToSignupBtn.addEventListener("click", () => {
     signupForm.style.display = "block";
 });
 
-// Ẩn modal khi nhấn vào nút "Trở lại"
+// call back retun
 backToHomeBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         authModal.style.display = "none";
@@ -77,20 +76,18 @@ function removeActive(activeClass) {
 
 
 
-
-
 // pagination
-const pagination = document.querySelectorAll("#pagination .pagination-item__link");
+const pagination = document.querySelectorAll(".pagination-item__link");
  pagination.forEach((a) => { 
     a.addEventListener("click", (e) => { 
         e.preventDefault(); removeActive("pagination-item__link--active")
      a.classList.add("pagination-item__link--active"); 
     }); }); 
 
-function Removepagination(){ 
-    pagination.forEach((a) => { 
-        a.classList.remove("pagination-item__link--active"); });
-    }
+// function Removepagination(){ 
+    // pagination.forEach((a) => { 
+        // a.classList.remove("pagination-item__link--active"); });
+    // }
 
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
@@ -113,7 +110,7 @@ function changeStep(step){
 function updateBtn(){
      pagination.forEach((step,id)=>{
         if(id<currentActive){
-            Removepagination()
+            removeActive("pagination-item__link--active")
             step.classList.add("pagination-item__link--active");
             
         }
@@ -126,23 +123,22 @@ function updateBtn(){
      })
 }
 
-
-
-    const categoryItems = document.querySelectorAll("#category-id .category-item");
+//category
+    const categoryItems = document.querySelectorAll(".category-item");
 
     categoryItems.forEach((item) => {
         item.addEventListener("click", (event) => {
             event.preventDefault();
-            removeActiveCategory();
+            removeActive("category-item--active");
             item.classList.add("category-item--active");
         });
     });
 
-    function removeActiveCategory() {
-        categoryItems.forEach((item) => {
-            item.classList.remove("category-item--active");
-        });
-    }
+    // function removeActiveCategory() {
+        // categoryItems.forEach((item) => {
+            // item.classList.remove("category-item--active");
+        // });
+    // }
    
     
         const notifyItem = document.getElementById('has-noti');
@@ -169,6 +165,152 @@ function updateBtn(){
                 option.classList.add('header__search-select-item-active');
             });
         });
+
+
+        function Validator(formSelector){
+            function getParen(element, selector){
+                while(element.parentElement){
+                    if(element.parentElement.matches(selector)){
+                        return element.parentElement;
+                    }
+                    element = element.parentElement;
+                }
+
+            }
+
+
+
+            var formRules ={};
+            var validatorRules = {
+                required: function(value){
+                    return value ? undefined : '入力してください';
+                },
+                email: function(value){
+                    var regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+                    return regex.test(value) ? undefined : 'メールアドレスを入力してください';
+                },
+                min: function (min) {
+                    return function (value) {
+                        return value.length >= min ? undefined : `${min}文字以上を入力してください`;
+                    };
+                },
+                
+                max: function(max){
+                    return function(value){
+                        return value.length <= max ? undefined : `${max}文字以上を入力してください`;
+
+                    };
+                },
+            }
+
+            var formElement = document.querySelector(formSelector);
+
+            if(formElement){
+
+                var inputs = formElement.querySelectorAll('[name][rules]');
+
+                for(var input of inputs){
+
+                    var rules = input.getAttribute('rules').split('|');
+                                                             
+
+                    for (var rule of rules) {
+                        let ruleInfo;
+                        const isRuleHasValue = rule.includes(':');
+                    
+                        if (isRuleHasValue) {
+                            ruleInfo = rule.split(':');
+                            rule = ruleInfo[0];
+                        }
+                    
+                        let ruleFunc = validatorRules[rule];
+                        if (isRuleHasValue) {
+                            ruleFunc = ruleFunc(ruleInfo[1]);
+                        }
+                    
+                        if (Array.isArray(formRules[input.name])) {
+                            formRules[input.name].push(ruleFunc);
+                        } else {
+                            formRules[input.name] = [ruleFunc];
+                        }
+                    }
+                    
+            
+                // blur , change,...
+
+                input.onblur = handleValidate;
+                input.oninput = handleClear;
+            }
+            
+            function handleValidate(event) {
+                const rules = formRules[event.target.name];
+                let errMessage;
+            
+                rules.find((rule) => {
+                    errMessage = rule(event.target.value);
+                    return errMessage;
+                });
+            
+                const formGroup = getParen(event.target, '.auth-form__group');
+                if (formGroup) {
+
+                    const formMess = formGroup.querySelector('.form-mesage');
+                    if (errMessage) {
+
+                        formGroup.classList.add('invalid');
+                        if (formMess) formMess.innerText = errMessage;
+                    } else {
+
+                        formGroup.classList.remove('invalid');
+                        if (formMess) formMess.innerText = '';
+                    }
+                }
+            
+                return !errMessage; // Trả về true nếu không có lỗi
+            }
+            
+                function handleClear(event){
+                    var formGroup = getParen(event.target,'.auth-form__group');
+
+                    if(formGroup.classList.contains('invalid')){
+
+                        formGroup.classList.remove('invalid');
+                        var formMess = formGroup.querySelector('.form-mesage');
+
+                        if(formMess){
+                            formMess.innerText = '';
+                        }
+                    }
+
+                }
+                               
+            }
+
+            // submit form
+            formElement.onsubmit = function (event) {
+                event.preventDefault();
+                const inputs = formElement.querySelectorAll('[name][rules]');
+                let isValid = true;
+            
+                for (const input of inputs) {
+                    if (!handleValidate({ target: input })) {
+                        isValid = false;
+                    }
+                }
+            
+                if (isValid) {
+                    alert("ログインに成功しました")
+                    formElement.submit();
+                } else {
+                    alert("もう一度お試しください")
+                    
+                }
+            };
+            
+
+
+        }
         
        
         

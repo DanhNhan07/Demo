@@ -1078,3 +1078,6 @@ i.home-product-item__like-icon-empty{
     display: flex;
     flex-direction: column;
 }
+.invalid{
+    color: #e43f3f;
+}
